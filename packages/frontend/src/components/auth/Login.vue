@@ -8,17 +8,23 @@ const register = () => {
 }
 
 const login = async () => {
-  await fetch('http://localhost:3000/login', {
+  console.log(
+    JSON.stringify({
+      acount: acount.value,
+      password: password.value
+    })
+  )
+  const res = await fetch('http://localhost:3000/login', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
     },
     body: JSON.stringify({
-      acount,
-      password
+      acount: 1,
+      password: 123123
     })
   })
-  console.log(password.value, acount.value)
+  console.log(await res.json())
 }
 </script>
 
