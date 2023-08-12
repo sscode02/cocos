@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite && pnpm run build-tw",
     "build": "tsc && vite build",
     "build-tw": "tailwind build -i ./src/input.css -o ./dist/output.css --watch",
     "format-check": "prettier --check --cache --parser typescript \"**/*.[tj]s?(x)\"",
